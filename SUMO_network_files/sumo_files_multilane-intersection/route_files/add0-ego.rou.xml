@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-05-03 11:43:29 by Eclipse SUMO netedit Version 1.12.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="ev-ego" vClass="passenger" guiShape="passenger" color="73,202,25,0" jmDriveAfterYellowTime="0" impatience="0" />
+        <!--
+		<param key="airDragCoefficient" value="0.35"/>
+        <param key="constantPowerIntake" value="100"/>
+        <param key="frontSurfaceArea" value="2.6"/>
+        <param key="has.battery.device" value="true"/>
+        <param key="internalMomentOfInertia" value="0.01"/>
+        <param key="maximumBatteryCapacity" value="64000"/>
+        <param key="maximumPower" value="150000"/>
+        <param key="propulsionEfficiency" value=".98"/>
+        <param key="radialDragCoefficient" value="0.1"/>
+        <param key="recuperationEfficiency" value=".96"/>
+        <param key="rollDragCoefficient" value="0.01"/>
+        <param key="stoppingTreshold" value="0.1"/>
+        <param key="vehicleMass" value="1830"/>
+    </vType>
+	-->
+    <route id="r_0" edges="-gneE2 -gneE1 gneE80 gneE81 gneE82 gneE83 gneE84 gneE85 gneE86 gneE87 gneE88 gneE89 gneE90 gneE91 gneE92 gneE93 gneE94 gneE95 gneE96 gneE1 gneE4 gneE45 gneE46 gneE47 gneE48 gneE49 gneE50 gneE51 gneE52 gneE53 gneE54 gneE55 gneE56 gneE57 gneE58 gneE59 gneE60 -gneE4 gneE3 gneE61 gneE62 gneE63 gneE64 gneE65 gneE66 gneE67 gneE68 gneE69 gneE70 gneE71 gneE72 gneE73 gneE74 -gneE3 gneE2 gneE30 gneE31 gneE32 gneE33 gneE34 gneE35 gneE36 gneE37 gneE38 gneE39 gneE40 gneE41 gneE42 gneE43 -gneE2 gneE4 gneE45 gneE46 gneE47 gneE48 gneE49 gneE50 gneE51 gneE52 gneE53 gneE54 gneE55 gneE56 gneE57 gneE58 gneE59 gneE60 -gneE4 -gneE1 gneE80 gneE81 gneE82 gneE83 gneE84 gneE85 gneE86 gneE87 gneE88 gneE89 gneE90 gneE91 gneE92 gneE93 gneE94 gneE95 gneE96 gneE1 gneE3 gneE61 gneE62 gneE63 gneE64 gneE65 gneE66 gneE67 gneE68 gneE69 gneE70 gneE71 gneE72 gneE73 gneE74 -gneE3 gneE4 gneE45 gneE46 gneE47 gneE48 gneE49 gneE50 gneE51 gneE52 gneE53 gneE54 gneE55 gneE56 gneE57 gneE58 gneE59 gneE60 -gneE4 gneE2 gneE30 gneE31 gneE32 gneE33 gneE34 gneE35 gneE36 gneE37 gneE38 gneE39 gneE40 gneE41 gneE42 gneE43 -gneE2 gneE3 gneE61 gneE62 gneE63 gneE64 gneE65 gneE66 gneE67 gneE68 gneE69 gneE70 gneE71 gneE72 gneE73 gneE74 -gneE3 -gneE1 gneE80 gneE81 gneE82 gneE83 gneE84 gneE85 gneE86 gneE87 gneE88 gneE89 gneE90 gneE91 gneE92 gneE93 gneE94 gneE95 gneE96 gneE1 gneE2 gneE30 gneE31 gneE32 gneE33 gneE34 gneE35 gneE36 gneE37 gneE38 gneE39 gneE40 gneE41 gneE42 gneE43" color="green" repeat="10000"/>
+    <vehicle id="v_0" type="ev-ego" depart="0.00" color="green" route="r_0"/>
+</routes>

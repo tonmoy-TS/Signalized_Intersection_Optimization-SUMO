@@ -1,0 +1,28 @@
+# --- Not for public release ---
+# Reference PDFs (final report + supervisor's paper) — private reference material.
+/docs/
+
+# Dr. Meng's optimal-control solver code — not distributed here; obtain separately.
+/matlab_sumo_interface/eco-and/
+
+# Historical / deprecated scratch code, kept locally for reference only.
+/matlab_sumo_interface/expired/
+/matlab_sumo_interface/RL_legacy_codes/
+
+# Generated experiment output (XML dumps, .mat files, plots) from local runs.
+/matlab_sumo_interface/SUMO_results/
+
+# --- Only the active SUMO network ships ---
+# sumo_files_multilane-intersection/ is the only maintained network variant;
+# the others are earlier/inactive iterations kept locally for reference.
+/SUMO_network_files/sumo_files/
+/SUMO_network_files/sumo_files_2/
+/SUMO_network_files/sumo_files_simple-intersection/
+/SUMO_network_files/sumo_files_single-lane/
+/SUMO_network_files/sumo_files_tl-logic/
+
+# --- General cruft ---
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

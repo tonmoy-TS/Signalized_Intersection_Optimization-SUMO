@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-05-03 12:07:13 by Eclipse SUMO netedit Version 1.12.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="ev-hv-2" vClass="passenger" guiShape="passenger" color="225,195,112,0" jmDriveAfterYellowTime="0" impatience="0"/>
+      <!--  <param key="airDragCoefficient" value="0.35"/>
+        <param key="constantPowerIntake" value="100"/>
+        <param key="frontSurfaceArea" value="2.6"/>
+        <param key="has.battery.device" value="true"/>
+        <param key="internalMomentOfInertia" value="0.01"/>
+        <param key="maximumBatteryCapacity" value="64000"/>
+        <param key="maximumPower" value="150000"/>
+        <param key="propulsionEfficiency" value=".98"/>
+        <param key="radialDragCoefficient" value="0.1"/>
+        <param key="recuperationEfficiency" value=".96"/>
+        <param key="rollDragCoefficient" value="0.01"/>
+        <param key="stoppingTreshold" value="0.1"/>
+        <param key="vehicleMass" value="1830"/>
+    </vType>
+	-->
+	<!--
+    <route id="r_2" edges="-gneE3 -gneE1 gneE80 gneE81 gneE82 gneE83 gneE84 gneE85 gneE86 gneE87 gneE88 gneE89 gneE90 gneE91 gneE92 gneE93 gneE94 gneE95 gneE96 gneE1 gneE3 gneE61 gneE62 gneE63 gneE64 gneE65 gneE66 gneE67 gneE68 gneE69 gneE70 gneE71 gneE72 gneE73 gneE74" color="79,229,245,0" repeat="1"/>
+    <flow id="f_2" type="ev-hv-2" begin="0.00" color="245,201,120" route="r_2" end="100000000.00" vehsPerHour="100.00"/>
+	-->
+    <route id="rSN" edges="-gneE3 -gneE1" color="79,229,245,0" repeat="0"/>
+    <flow id="fSN" type="ev-hv-2" begin="0.00" color="red" route="rSN" end="100000000.00" departLane="best" departPos="base" departSpeed="random" vehsPerHour="150"/>	
+	
+	<route id="rNS" edges="gneE1 gneE3" color="79,229,245,0" repeat="0"/>
+    <flow id="fNS" type="ev-hv-2" begin="0.00" color="red" route="rNS" end="100000000.00" departLane="best" departPos="base" departSpeed="random" vehsPerHour="150"/>
+	
+</routes>

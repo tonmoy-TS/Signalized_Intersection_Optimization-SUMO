@@ -1,0 +1,10 @@
+<additional>
+	<!--
+	<edgeData id="edgeDump" aggregate="false" file="edgeDataDump.xml" excludeEmpty="true" />
+	<edgeData id="edgeEmission" aggregate="false" type="emissions" file="edgeEmissionDump.xml" excludeEmpty="true" />
+	-->
+	
+	<laneData id="laneDump" aggregate="false" file="laneDataDump.xml" excludeEmpty="true" />
+	<laneData id="laneEmission" aggregate="false" type="emissions" file="laneEmissionDump.xml" excludeEmpty="true" />
+	
+</additional>

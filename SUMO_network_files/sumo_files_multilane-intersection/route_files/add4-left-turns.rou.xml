@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-05-03 12:48:31 by Eclipse SUMO netedit Version 1.12.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="ev-hv-4" vClass="passenger" guiShape="passenger" color="240,212,75,0"  jmDriveAfterYellowTime="0" impatience="0" />
+	<!--
+    <route id="r_4" edges="gneE1 gneE4 gneE45 gneE46 gneE47 gneE48 gneE49 gneE50 gneE51 gneE52 gneE53 gneE54 gneE55 gneE56 gneE57 gneE58 gneE59 gneE60 -gneE4 gneE3 gneE61 gneE62 gneE63 gneE64 gneE65 gneE66 gneE67 gneE68 gneE69 gneE70 gneE71 gneE72 gneE73 gneE74 -gneE3 gneE2 gneE30 gneE31 gneE32 gneE33 gneE34 gneE35 gneE36 gneE37 gneE38 gneE39 gneE40 gneE41 gneE42 gneE43 -gneE2 -gneE1 gneE80 gneE81 gneE82 gneE83 gneE84 gneE85 gneE86 gneE87 gneE88 gneE89 gneE90 gneE91 gneE92 gneE93 gneE94 gneE95 gneE96"/>
+    <flow id="f_4" type="ev-hv-4" begin="0.00" color="238,207,100" route="r_4" end="100000000.00" vehsPerHour="100.00"/>
+	-->
+	
+	<route id="rWN" edges="-gneE2 -gneE1" color="79,229,245,0" repeat="0"/>
+    <flow id="fWN" type="ev-hv-4" begin="0.00" color="white" route="rWN" end="100000000.00" departLane="best" departPos="base" departSpeed="random" vehsPerHour="50"/>
+	
+	<route id="rSW" edges="-gneE3 gneE2" color="79,229,245,0" repeat="0"/>
+    <flow id="fSW" type="ev-hv-4" begin="1.50" color="white" route="rSW" end="100000000.00" departLane="best" departPos="base" departSpeed="random" vehsPerHour="50"/>
+	
+    <route id="rES" edges="-gneE4 gneE3" color="79,229,245,0" repeat="0"/>
+    <flow id="fES" type="ev-hv-4" begin="2.10" color="white" route="rES" end="100000000.00" departLane="best" departPos="base" departSpeed="random" vehsPerHour="50"/>	
+	
+	<route id="rNE" edges="gneE1 gneE4" color="79,229,245,0" repeat="0"/>
+    <flow id="fNE" type="ev-hv-4" begin="2.50" color="white" route="rNE" end="100000000.00" departLane="best" departPos="base" departSpeed="random" vehsPerHour="50"/>	
+</routes>

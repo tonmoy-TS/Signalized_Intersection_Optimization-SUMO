@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-05-03 12:09:33 by Eclipse SUMO netedit Version 1.12.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="AV.STRAIGHT" vClass="passenger" guiShape="passenger" color="white" sigma="0" jmDriveAfterYellowTime="0" impatience="0" lcSpeedGain="0" lcKeepRight="0" lcCooperative="0" />
+		<!--
+		<param key="airDragCoefficient" value="0.35"/>
+        <param key="constantPowerIntake" value="100"/>
+        <param key="frontSurfaceArea" value="2.6"/>
+        <param key="has.battery.device" value="true"/>
+        <param key="internalMomentOfInertia" value="0.01"/>
+        <param key="maximumBatteryCapacity" value="64000"/>
+        <param key="maximumPower" value="150000"/>
+        <param key="propulsionEfficiency" value=".98"/>
+        <param key="radialDragCoefficient" value="0.1"/>
+        <param key="recuperationEfficiency" value=".96"/>
+        <param key="rollDragCoefficient" value="0.01"/>
+        <param key="stoppingTreshold" value="0.1"/>
+        <param key="vehicleMass" value="1830"/>
+    </vType>
+	-->
+	
+		<!-- HORIZONTAL FLOWS AV Edge WE -->
+		<route id="rWE.AV.10" edges="-edW edE" repeat="0"/>
+			<flow id="fWE.AV.10" type="AV.STRAIGHT" route="rWE.AV.10" begin="0.00" end="100000000.00" color="white" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="40" />	
+	
+		<route id="rWE.AV.20" edges="-edW edE" repeat="0"/>
+			<flow id="fWE.AV.20" type="AV.STRAIGHT" route="rWE.AV.20" begin="0.00" end="100000000.00" color="white" departLane="2" departPos="base" departSpeed="random" arrivalLane="2" vehsPerHour="80" />	
+		
+			
+		<!-- VERTICAL FLOWS AV Edge NS -->
+		<route id="rNS.AV.30" edges="-edN edS" repeat="0"/>
+			<flow id="fNS.AV.30" type="AV.STRAIGHT" route="rNS.AV.30" begin="0.00" end="100000000.00" color="white" departLane="0" departPos="base" departSpeed="random" arrivalLane="0" vehsPerHour="120"/>
+
+		<route id="rNS.AV.40" edges="-edN edS" repeat="0"/>
+			<flow id="fNS.AV.40" type="AV.STRAIGHT" route="rNS.AV.40" begin="0.00" end="100000000.00" color="white" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="160"/>
+	
+		<route id="rNS.AV.50" edges="-edN edS" repeat="0"/>
+			<flow id="fNS.AV.50" type="AV.STRAIGHT" route="rNS.AV.50" begin="0.00" end="100000000.00" color="white" departLane="2" departPos="base" departSpeed="random" arrivalLane="2" vehsPerHour="200"/>
+	
+	
+		<!-- HORIZONTAL FLOWS AV Edge EW -->
+		<route id="rEW.AV.60" edges="-edE edW" repeat="0"/>
+			<flow id="fEW.AV.60" type="AV.STRAIGHT" route="rEW.AV.60" begin="0.00" end="100000000.00" color="white" departLane="0" departPos="base" departSpeed="random" arrivalLane="0" vehsPerHour="240" />	
+	
+		<route id="rEW.AV.70" edges="-edE edW" repeat="0"/>
+			<flow id="fEW.AV.70" type="AV.STRAIGHT" route="rEW.AV.70" begin="0.00" end="100000000.00" color="white" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="280" />	
+	
+		<route id="rEW.AV.80" edges="-edE edW" repeat="0"/>
+			<flow id="fEW.AV.80" type="AV.STRAIGHT" route="rEW.AV.80" begin="0.00" end="100000000.00" color="white" departLane="2" departPos="base" departSpeed="random" arrivalLane="2" vehsPerHour="320" />	
+	
+		<!-- VERTICAL FLOWS AV Edge SN -->
+	    <route id="rSN.AV.90" edges="-edS edN" repeat="0"/>
+			<flow id="fSN.AV.90" type="AV.STRAIGHT" route="rSN.AV.90" begin="0.00" end="100000000.00" color="white" departLane="0" departPos="base" departSpeed="random" arrivalLane="0" vehsPerHour="360"/>	
+		
+		<route id="rSN.AV.100" edges="-edS edN" repeat="0"/>
+			<flow id="fSN.AV.100" type="AV.STRAIGHT" route="rSN.AV.100" begin="0.00" end="100000000.00" color="white" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="400"/>	
+					
+		<!--
+		<route id="rSN.AV.100" edges="-edS edN" repeat="0"/>
+			<flow id="fSN.AV1.100" type="AV.STRAIGHT" route="rSN.AV.100" begin="0.00" end="100000000.00" color="white" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="400"/>	
+		    <flow id="fSN.AV2.100" type="AV.STRAIGHT" route="rSN.AV.100" begin="0.00" end="100000000.00" color="white" departLane="2" departPos="base" departSpeed="random" arrivalLane="2" vehsPerHour="400"/>	
+		-->    
+	
+	<vType id="HDV.STRAIGHT" vClass="passenger" guiShape="delivery" color="yellow" sigma="0.5" jmDriveAfterYellowTime="0" impatience="0" lcSpeedGain="0" lcKeepRight="0" lcCooperative="0" />
+	
+		<!-- HORIZONTAL FLOWS HDV Edge WE -->
+		<route id="rWE.HDV.100" edges="-edW edE" repeat="0"/>
+			<flow id="fWE.HDV.100" type="HDV.STRAIGHT" route="rWE.HDV.100" begin="0.00" end="100000000.00" color="yellow" departLane="0" departPos="base" departSpeed="random" arrivalLane="0" vehsPerHour="400"/>		
+				
+		<route id="rWE.HDV.90" edges="-edW edE" repeat="0"/>
+			<flow id="fWE.HDV.90" type="HDV.STRAIGHT" route="rWE.HDV.90" begin="0.00" end="100000000.00" color="yellow" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="360" />	
+	
+		<route id="rWE.HDV.80" edges="-edW edE" repeat="0"/>
+			<flow id="fWE.HDV.80" type="HDV.STRAIGHT" route="rWE.HDV.80" begin="0.00" end="100000000.00" color="yellow" departLane="2" departPos="base" departSpeed="random" arrivalLane="2" vehsPerHour="320" />	
+		
+			
+		<!-- VERTICAL FLOWS HDV Edge NS -->
+		<route id="rNS.HDV.70" edges="-edN edS" repeat="0"/>
+			<flow id="fNS.HDV.70" type="HDV.STRAIGHT" route="rNS.HDV.70" begin="0.00" end="100000000.00" color="yellow" departLane="0" departPos="base" departSpeed="random" arrivalLane="0" vehsPerHour="280"/>
+
+		<route id="rNS.HDV.60" edges="-edN edS" repeat="0"/>
+			<flow id="fNS.HDV.60" type="HDV.STRAIGHT" route="rNS.HDV.60" begin="0.00" end="100000000.00" color="yellow" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="240"/>
+	
+		<route id="rNS.HDV.50" edges="-edN edS" repeat="0"/>
+			<flow id="fNS.HDV.50" type="HDV.STRAIGHT" route="rNS.HDV.50" begin="0.00" end="100000000.00" color="yellow" departLane="2" departPos="base" departSpeed="random" arrivalLane="2" vehsPerHour="200"/>
+	
+	
+		<!-- HORIZONTAL FLOWS HDV Edge EW -->
+		<route id="rEW.HDV.40" edges="-edE edW" repeat="0"/>
+			<flow id="fEW.HDV.40" type="HDV.STRAIGHT" route="rEW.HDV.40" begin="0.00" end="100000000.00" color="yellow" departLane="0" departPos="base" departSpeed="random" arrivalLane="0" vehsPerHour="160" />	
+	
+		<route id="rEW.HDV.30" edges="-edE edW" repeat="0"/>
+			<flow id="fEW.HDV.30" type="HDV.STRAIGHT" route="rEW.HDV.30" begin="0.00" end="100000000.00" color="yellow" departLane="1" departPos="base" departSpeed="random" arrivalLane="1" vehsPerHour="120" />	
+	
+		<route id="rEW.HDV.20" edges="-edE edW" repeat="0"/>
+			<flow id="fEW.HDV.20" type="HDV.STRAIGHT" route="rEW.HDV.20" begin="0.00" end="100000000.00" color="yellow" departLane="2" departPos="base" departSpeed="random" arrivalLane="2" vehsPerHour="80" />	
+	
+		<!-- VERTICAL FLOWS HDV Edge SN -->
+	    <route id="rSN.HDV.10" edges="-edS edN" repeat="0"/>
+			<flow id="fSN.HDV.10" type="HDV.STRAIGHT" route="rSN.HDV.10" begin="0.00" end="100000000.00" color="yellow" departLane="0" departPos="base" departSpeed="random" arrivalLane="0" vehsPerHour="40"/>	
+		    
+			
+</routes>
