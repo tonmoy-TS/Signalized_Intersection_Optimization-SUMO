@@ -1,6 +1,8 @@
 # --- Not for public release ---
-# Reference PDFs (final report + supervisor's paper) — private reference material.
-/docs/
+# Only SUMO Notes.pdf from docs/ is published; the report and the
+# supervisor's paper stay private reference material.
+/docs/*
+!/docs/SUMO Notes.pdf
 
 # Dr. Meng's optimal-control solver code — not distributed here; obtain separately.
 /matlab_sumo_interface/eco-and/

@@ -51,6 +51,8 @@ against an eco-driving OCP formulation ("ECO-AND") from:
 > Nonstop Crossing of Signalized Intersections," *IEEE Transactions on
 > Automation Science and Engineering*, vol. 19, no. 1, pp. 320-331, Jan. 2022.
 
+![OC-controlled vehicles on a single lane](media/OC_controlled_vehicles_Singlelane.gif)
+
 That specific solver implementation is not included in this repo (see
 below) — it's mentioned here only as the algorithm this harness was
 originally exercised with, not as what this repo ships.
@@ -58,19 +60,21 @@ originally exercised with, not as what this repo ships.
 ## What's in this repo
 
 ```
-matlab_sumo_interface/     MATLAB/TraCI simulation harness
-  main_SUMO.m                Entry point: single simulation run
-  main_SUMO_simloop.m         Parameter sweep launcher (vph / range / MPR)
-  OC_SUMO.m                    Solver dispatch point — the extension hook described above
-  SUMO_Init.m                   Starts SUMO via TraCI, wires up file paths
-  Env_Const.m                   Vehicle/environment physical constants
-  vehInsideMEMEDetectors.m      Classifies vehicles by type and control-zone membership
-  tl_utils/                     Traffic-light phase/timing lookup utilities
-  post_processing/              Parses SUMO XML output into tables and plots
-
-SUMO_network_files/
-  sumo_files_multilane-intersection/   4-arm, 3-lanes-per-arm SUMO network,
-                                       route files, and E3 detector definitions
+.
+├── matlab_sumo_interface/            MATLAB/TraCI simulation harness
+│   ├── main_SUMO.m                   Entry point: single simulation run
+│   ├── main_SUMO_simloop.m           Parameter sweep launcher (vph / range / MPR)
+│   ├── OC_SUMO.m                     Solver dispatch point — the extension hook described above
+│   ├── SUMO_Init.m                   Starts SUMO via TraCI, wires up file paths
+│   ├── Env_Const.m                   Vehicle/environment physical constants
+│   ├── vehInsideMEMEDetectors.m      Classifies vehicles by type and control-zone membership
+│   ├── tl_utils/                     Traffic-light phase/timing lookup utilities
+│   └── post_processing/              Parses SUMO XML output into tables and plots
+│
+└── SUMO_network_files/
+    └── sumo_files_multilane-intersection/   4-arm, 3-lanes-per-arm SUMO
+                                              network, route files, and E3
+                                              detector definitions
 ```
 
 ## What's not included
@@ -102,5 +106,47 @@ SUMO_network_files/
 
 ## Results
 
-Results are coming.
+### SUMO environment
+
+The test network is a 4-arm signalized intersection with 3 lanes per arm.
+Multi-Entry-Multi-Exit (E3) detectors mark the DSRC control-zone boundary on
+each approach: once a CAV crosses an entry detector, the harness takes over
+its speed via the solver contract described above; it's released back to
+free-flow after crossing the exit detector at the stop line. The signal
+itself runs a 4-phase cycle (protected through/left movements per arm).
+
+<p align="center">
+  <img src="media/OC_SUMO_intersection_illustration.png" height="240" />
+  <img src="media/SUMO_entry-exit_detectors.png" height="240" />
+</p>
+
+<p align="center">
+  <img src="media/traffic_light_phases.png" width="800" />
+</p>
+
+**OC-controlled vehicles crossing under mixed MPR:**
+
+![OC-controlled vehicles, mixed MPR](media/OC_Controlled_vehicles_mixed_MPR.gif)
+
+*Color legend: **green** vehicles are executing the OCP speed profile inside
+the control zone, turning **white** once they cross the intersection and
+return to free-flow; **blue** vehicles are AVs for which the solver could
+not find a feasible non-stop trajectory; **yellow** vehicles are
+human-driven (HDVs), uncontrolled throughout.*
+
+**MPR sensitivity — 400 veh/h/lane, 300 m DSRC range:**
+
+![MPR vs. lane data (400 veh/h/lane, 300 m range)](media/vph_400-range_300-MPR%20vs%20Lane%20data.png)
+
+*A downward trend is noticeable across vehicle wait time, fuel consumption,
+and CO2 emissions as MPR increases from 0% to 100%, validating the
+controller's effect on network-level performance.*
+
+## Acknowledgements
+
+This work originated from a project funded by the Transportation Consortium of South-Central States (Tran-SET) (Project No.
+22ITSLSU41). Testing support was provided by the Louisiana Transportation Research Center (LTRC) and Louisiana State University.
+
+This work reflects an active research project. For updates regarding the project or to access complete project codes, please contact **Principal Investigator:** Xiangyu Meng, Ph.D., Division of Electrical and Computer Engineering, Louisiana State University — xmeng5@lsu.edu
+
 
