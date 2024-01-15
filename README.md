@@ -147,6 +147,11 @@ human-driven (HDVs), uncontrolled throughout.*
 and CO2 emissions as MPR increases from 0% to 100%, validating the
 controller's effect on network-level performance.*
 
+## Useful resources
+
+- [Eco-Driving of Connected and Autonomous Vehicles Approaching and Departing Signalized Intersections](https://repository.lsu.edu/transet_pubs/180/) — the Tran-SET final research report (Project No. 22ITSLSU41) this harness was built for.
+- [X. Meng and C. G. Cassandras, "Eco-Driving of Autonomous Vehicles for Nonstop Crossing of Signalized Intersections," IEEE T-ASE, 2022](https://doi.org/10.1109/TASE.2020.3029452) — the OCP formulation ("ECO-AND") this harness was originally validated against.
+
 ## Acknowledgements
 
 This work originated from a project funded by the Transportation Consortium of South-Central States (Tran-SET) (Project No.
