@@ -91,13 +91,10 @@ originally exercised with, not as what this repo ships.
 - Python 3 (optional — only needed for the XML→CSV helper scripts under
   `SUMO_network_files/sumo_files_multilane-intersection/`)
 
-**Known TraCI4Matlab issue:** `traci.trafficlights.getNextSwitch()` and
-`getPhaseDuration()` — both used by `tl_utils/globalTLsInformation.m` — are
-affected by a type-mismatch bug that corrupts their return values (see
-[traci4matlab#8](https://github.com/pipeacosta/traci4matlab/issues/8)). A
-root-cause fix is up for review in
-[traci4matlab#29](https://github.com/pipeacosta/traci4matlab/pull/29); until
-it's merged, apply that patch locally before running this harness.
+**Known TraCI4Matlab issue:** `getNextSwitch()`/`getPhaseDuration()` return
+corrupted values until you apply
+[this patch](patches/traci4matlab-trafficlights-fix/) — see there for
+details and status.
 
 ## Running a simulation
 
